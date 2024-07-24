@@ -1,0 +1,156 @@
+:root {
+    --left-width: max(37%, 200px);
+    --right-width: calc(100% - var(--left-width)) ;
+    --title-font-size: 23px;
+    --label-font-size: 14px;
+    --input-font-size: 16px;
+    --logo-font-size: 100px;
+    --error-font-size: 13px;
+    --button-font-size: 18px;
+    --padding-left: max(5%, 20px);
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+@font-face {
+    font-family: "Norse-Bold";
+    src: url("Norse-Bold.otf") format("opentype");
+  }
+
+body {
+    display:flex;
+    height: 150vh;
+}
+
+#left-part {
+    position: relative;
+    width: var(--left-width);
+    height: 100%;
+    background-size: cover;
+    background-image: url(halie-west-25xggax4bSA-unsplash.jpg);
+}
+
+#right-part {
+    background: #F9FAFB;
+    height: auto;
+    width: var(--right-width);
+    padding: 20vh 0;
+}
+
+#upper-right {
+    font-size: var(--title-font-size);
+    padding: 0 22% 20px var(--padding-left);
+}
+
+#input-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: max(30px, 15%);
+    row-gap: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px var(--padding-left);
+}
+
+.label-input {
+    width: max(100px, 30%);
+}
+
+.label-input label {
+    font-size: var(--label-font-size);
+}
+
+input {
+    display: block;
+    width: 100%;
+    font-size: var(--input-font-size);
+    border: 2px solid #E5E7EB ;
+    border-radius: 5px;
+    height: auto;
+    padding: 5px 7px;
+}
+
+.label-input input:focus {
+    border-color: blue;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+#input-title {
+    width: 100%;
+    font-size: var(--title-font-size);
+    margin: 0;
+}
+
+
+button {
+    margin: 40px var(--padding-left);
+    background-color: #596D48;
+    color: white;
+    font-size: var(--button-font-size);
+    padding: 15px  60px;
+    border-radius: 10px;
+    border: none;
+}
+
+#credit {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+}
+
+#credit a,  #credit {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.change-page {
+    margin-left: var(--padding-left);
+
+}
+
+.change-page a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: 600;
+}
+
+
+#logo-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 15%;
+    color: white;
+    font-family: "Norse-Bold";
+    font-size: var(--logo-font-size);
+
+}
+#logo-container img {
+    height: 80%;
+}
+
+
+
+.invalid {
+    border-color: red;
+}
+
+#error-message {
+    font-size: var(--error-font-size);
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
